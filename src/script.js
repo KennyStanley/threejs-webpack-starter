@@ -17,7 +17,7 @@ const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
 
 // Materials
 
-const material = new THREE.MeshBasicMaterial()
+const material = new THREE.MeshStandardMaterial()
 material.color = new THREE.Color(0xff0000)
 
 // Mesh
@@ -26,7 +26,7 @@ scene.add(sphere)
 
 // Lights
 
-const pointLight = new THREE.PointLight(0xffffff, 0.1)
+const pointLight = new THREE.PointLight(0xffffff, 0.5)
 pointLight.position.x = 2
 pointLight.position.y = 3
 pointLight.position.z = 4
