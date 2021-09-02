@@ -18,6 +18,8 @@ const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
 // Materials
 
 const material = new THREE.MeshStandardMaterial()
+material.metalness = 0.7
+material.roughness = 0.2
 material.color = new THREE.Color(0xff0000)
 
 // Mesh
@@ -73,7 +75,8 @@ scene.add(camera)
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+    canvas: canvas,
+    alpha: true
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
